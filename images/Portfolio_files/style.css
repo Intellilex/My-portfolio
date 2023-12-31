@@ -427,7 +427,7 @@ section {
     position: relative;
     display: flex;
     flex-wrap: wrap;
-    max-width: 160rem;
+    max-width: 140rem;
     align-items: center;
     justify-content: center;
     
@@ -440,7 +440,7 @@ section {
     margin: 3rem;
     padding: 3rem 2rem;
     background: var(--second-bg-color);
-    width: 70rem;
+    width: 60rem;
     height: 50rem;
     align-items: center;
 }
