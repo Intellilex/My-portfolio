@@ -77,11 +77,18 @@ section {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+}
+
+.home-container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1600px;
 }
 
 .home-content {
     width: 60rem;
+    margin-right: 6rem;
 }
 
 .home-content h1 {
@@ -258,7 +265,6 @@ section {
     display: flex;
     align-items: center;
     flex-direction: column;
-    /* min-height: auto; */
     padding-bottom: 5rem;
 }
 
@@ -267,6 +273,7 @@ section {
     display: flex;
     flex-wrap: wrap;
     gap: 5rem;
+    max-width: 1600px;
 }
 
 .education-row .education-column {
@@ -323,13 +330,17 @@ section {
 .skills {
     padding-bottom: 7rem;
     background: var(--second-bg-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-
 
 .skills .skills-row {
     display: flex;
     flex-wrap: wrap;
     gap: 5rem;
+    max-width: 1600px;
 }
 
 .skills-row .skills-column {
@@ -423,13 +434,17 @@ section {
     align-items: center;
 }
 
+.projects a {
+    color: var(--text-color);
+}
+
 .projects-row {
     position: relative;
     display: flex;
     flex-wrap: wrap;
-    max-width: 160rem;
     align-items: center;
     justify-content: center;
+    max-width: 1600px;
     
 }
 
