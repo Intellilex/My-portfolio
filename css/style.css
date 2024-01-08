@@ -17,6 +17,7 @@
     --text-color: #000000;
     --main-color: #fb9f44;
     --text-hover-color: #ffffff;
+    --window-max-width: 1600px;
 }
 
 html {
@@ -36,9 +37,17 @@ body {
     padding: 2rem 9%;
     background: var(--main-color);
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     z-index: 100;
+}
+
+.header-container {
+    max-width: var(--window-max-width);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .logo {
@@ -77,19 +86,20 @@ section {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 .home-container {
     display: flex;
     flex-wrap: wrap;
-    /* max-width: 1440px; */
+    max-width: var(--window-max-width);
+    width: 100%;
     justify-content: space-between;
+    align-items: center;
 }
 
 .home-content {
-    width: 60rem;
-    /* margin-right: 3rem; */
+    width: 60rem;;
 }
 
 .home-content h1 {
@@ -119,7 +129,7 @@ section {
     width: 140px;
     height: 70px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between;;
 }
 
 .home-sci a {
@@ -196,7 +206,7 @@ section {
     background: var(--second-bg-color);
     align-items: center;
     flex-direction: column;
-    gap: 2rem
+    gap: 2rem;
 }
 
 .heading {
@@ -242,6 +252,7 @@ section {
 
 .about-content {
     text-align: center;
+    max-width: var(--window-max-width);
 }
 
 .about-content h3 {
@@ -267,6 +278,12 @@ section {
     align-items: center;
     flex-direction: column;
     padding-bottom: 5rem;
+}
+
+.education-container {
+    max-width: var(--window-max-width);
+    width: 100%;
+
 }
 
 
@@ -327,6 +344,15 @@ section {
     padding-top: .5rem;
 }
 
+ul {
+    padding-left: 2rem;
+}
+
+li {
+    font-size: 1.6rem;
+    list-style-type: square;
+}
+
 .skills {
     padding-bottom: 7rem;
     background: var(--second-bg-color);
@@ -334,6 +360,11 @@ section {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.skills-container {
+    max-width: var(--window-max-width);
+    width: 100%;
 }
 
 .skills .skills-row {
@@ -429,69 +460,83 @@ section {
 .projects {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: center;
+    align-self: center;
 }
 
-.projects a {
-    color: var(--text-color);
-}
-
-.projects-row {
-    position: relative;
+.projects .projects-row {
     display: flex;
     flex-wrap: wrap;
+    gap: 5rem;
+}
+
+.projects-row .projects-column {
+    flex: 1 1 40rem;
     align-items: center;
-    justify-content: space-around;
-    margin:  0 11%;
-    
+    justify-content: center;
+}
+
+.skills-column .title {
+    font-size: 2.5rem;
+    margin: 0 0 1.5rem;
 }
 
 .projects-box {
     display: flex;
     flex-direction: column;
     border-radius: 2rem;
-    margin: 3rem;
-    padding: 3rem 2rem;
-    background: var(--second-bg-color);
-    /* width: 70rem; */
-    /* height: 50rem; */
+    aspect-ratio: 13/9;
+    /* background: var(--second-bg-color); */
+    background-image: url("../images/home.jpg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
     align-items: center;
+    margin-bottom: 3rem;
+    padding: 2rem 3rem;
     overflow: hidden;
 }
 
+
 .projects-content {
-    padding-right: 2rem;
-    padding-left: 2rem;
+    width: 100%;
+    height: 100%;
 }
 
-.projects-content h3 {
-    font-size: 3.6rem;
+.projects-content:hover {
+    background: #dbdfe597;
+    border-radius: 2rem;
 }
 
 .projects-content p {
     font-size: 1.6rem;
-    margin-bottom: 3rem;
+    color: transparent;
+    height: 100%;
+    text-align: center;
+    transition: 1s;
 }
 
-.projects-img {
-    width: 50%;
+.projects-content p:hover {
+    color: var(--text-color);
 }
 
-.projects-img img {
-    width: 100%;
-    object-fit: contain;
+.projects-content h3 {
+    display: flex;
+    font-size: 3.6rem;
+    justify-content: center;
 }
 
 @media screen and (max-width: 991px) {
     .home {
+        display: grid;
         flex-direction: column;
         justify-content: center;
+        align-items: flex-start;
     }
 
     .home-content {
+        margin-top: 25%;
         width: 100%;
-        /* padding-bottom: 20%; */
     }
 
     .home-sci {
